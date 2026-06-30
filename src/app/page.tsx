@@ -321,24 +321,18 @@ export default function Home() {
                       About Founder & Legacy
                     </Link>
                     <a 
-                      href="https://sreemcapitalrealty.example.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                      href="#" 
                       className="text-xs font-bold text-slate-200 hover:text-[#c94b2b] hover:translate-x-1 transition-all py-1 flex items-center justify-between"
-                      aria-label="Visit Sreem Capital Realty website, opens in new tab"
+                      aria-label="Sreem Capital Realty (Real Estate)"
                     >
                       <span>Sreem Capital Realty (Real Estate)</span>
-                      <span className="text-[10px] text-slate-400 font-normal">↗</span>
                     </a>
                     <a 
-                      href="https://eliteknotmatrimony.example.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                      href="#" 
                       className="text-xs font-bold text-slate-200 hover:text-[#c94b2b] hover:translate-x-1 transition-all py-1 flex items-center justify-between"
-                      aria-label="Visit Elite Knot Matrimony platform, opens in new tab"
+                      aria-label="Elite Knot Matrimony (Matrimony Platform)"
                     >
                       <span>Elite Knot Matrimony (Matrimony Platform)</span>
-                      <span className="text-[10px] text-slate-400 font-normal">↗</span>
                     </a>
                   </div>
                 </div>
@@ -397,22 +391,18 @@ export default function Home() {
                   About Founder & Legacy
                 </Link>
                 <a 
-                  href="https://sreemcapitalrealty.example.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                  href="#" 
                   className="text-xs font-medium text-slate-300 hover:text-indigo-400"
-                  aria-label="Visit Sreem Capital Realty website, opens in new tab"
+                  aria-label="Sreem Capital Realty (Real Estate)"
                 >
-                  Sreem Capital Realty (Real Estate) ↗
+                  Sreem Capital Realty (Real Estate)
                 </a>
                 <a 
-                  href="https://eliteknotmatrimony.example.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                  href="#" 
                   className="text-xs font-medium text-slate-300 hover:text-indigo-400"
-                  aria-label="Visit Elite Knot Matrimony platform, opens in new tab"
+                  aria-label="Elite Knot Matrimony (Matrimony Platform)"
                 >
-                  Elite Knot Matrimony (Matrimony Platform) ↗
+                  Elite Knot Matrimony (Matrimony Platform)
                 </a>
               </div>
             </div>
