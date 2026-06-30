@@ -63,15 +63,9 @@ export default function MarketplacePage() {
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-[#c94b2b] selection:text-white">
       
       {/* 1. Top Black Utility Bar */}
-      <div className="w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between border-b border-white/5 z-50 relative gap-2">
+      <div className="w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-center border-b border-white/5 z-50 relative gap-2">
         <div>
           Welcome to <span className="text-[#c94b2b]">Sreem Financials and Insurance Services</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">f</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">t</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">in</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">p</a>
         </div>
       </div>
       
@@ -302,16 +296,7 @@ export default function MarketplacePage() {
 
 
 
-      {/* Social Band */}
-      <section className="bg-[#1c1c1c] py-6 border-b border-neutral-800">
-        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center gap-6 text-slate-400 text-xs font-bold tracking-widest uppercase">
-          <a href="#" className="hover:text-[#c94b2b] transition-colors">Facebook</a>
-          <span className="text-neutral-800 font-light">|</span>
-          <a href="#" className="hover:text-[#c94b2b] transition-colors">Instagram</a>
-          <span className="text-neutral-800 font-light">|</span>
-          <a href="#" className="hover:text-[#c94b2b] transition-colors">LinkedIn</a>
-        </div>
-      </section>
+
 
       {/* Bottom Anchor Footer */}
       <footer className="bg-[#111111] py-20 text-slate-400 text-xs mt-auto">

@@ -61,15 +61,9 @@ export default function AboutNashPage() {
     <div className="min-h-screen bg-white text-neutral-900 font-sans antialiased selection:bg-neutral-950 selection:text-white pt-32 pb-24 flex flex-col justify-between">
       
       {/* 1. Top Black Utility Bar (Matches global style) */}
-      <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between border-b border-white/5 gap-2">
+      <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-center border-b border-white/5 gap-2">
         <div>
           Welcome to <span className="text-[#c94b2b]">Sreem Financials and Insurance Services</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">f</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">t</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">in</a>
-          <a href="#" className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#c94b2b] flex items-center justify-center text-white transition-colors text-[10px]">p</a>
         </div>
       </div>
 
@@ -296,7 +290,7 @@ export default function AboutNashPage() {
           {/* Biography Content Narrative */}
           <div className="text-neutral-600 text-sm leading-relaxed mb-6 space-y-4 font-medium">
             <p>
-              Naresh Kumar (Nash) represents a unique dual force in the wealth preservation landscape. By day, he is an institutional pillar in capital safeguard systems, asset protection portfolios, and complex international visitor insurance structures. Working closely with corporate syndicates and high-capacity family offices, Nash maps complex exposure variables to bulletproof risk-transfer frameworks.
+              Naresh Kumar (Nash) is an expert in wealth preservation and risk management. By day, he specializes in asset protection, capital safeguard systems, and complex international visitor insurance structures. Working closely with corporate syndicates and high-net-worth family offices, Nash identifies potential liabilities and builds bulletproof strategies to shield their wealth from risk.
             </p>
             <p>
               By weekend, however, the corporate exterior gives way to a dynamic, fun-loving sportsman. A dedicated cricket player and coordinator, Nash thrives in high-energy team dynamics. Whether he’s coordinating alternative private wealth networks or captaining local weekend matches, he infuses a jovial, high-energy, and trusted mindset into everything he builds.
@@ -317,16 +311,8 @@ export default function AboutNashPage() {
 
       {/* Footer System */}
       <div className="w-full mt-24">
-        {/* Social Band */}
-        <section className="bg-[#1c1c1c] py-6 border-b border-neutral-800">
-          <div className="max-w-7xl mx-auto px-6 flex justify-center items-center gap-6 text-slate-400 text-xs font-bold tracking-widest uppercase">
-            <a href="#" className="hover:text-[#c94b2b] transition-colors">Facebook</a>
-            <span className="text-neutral-800 font-light">|</span>
-            <a href="#" className="hover:text-[#c94b2b] transition-colors">Instagram</a>
-            <span className="text-neutral-800 font-light">|</span>
-            <a href="#" className="hover:text-[#c94b2b] transition-colors">LinkedIn</a>
-          </div>
-        </section>
+        
+
 
         {/* Bottom Anchor Footer */}
         <footer className="bg-[#111111] py-20 text-slate-400 text-xs">
