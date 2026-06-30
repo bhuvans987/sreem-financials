@@ -51,18 +51,7 @@ export default function Home() {
   // FAQ Accordion states
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  // Newsletter state
-  const [email, setEmail] = useState("");
-  const [signedUp, setSignedUp] = useState(false);
 
-  const handleSignUp = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSignedUp(true);
-      setEmail("");
-      setTimeout(() => setSignedUp(false), 4000);
-    }
-  };
 
   const toggleFaq = (idx: number) => {
     setActiveFaq(activeFaq === idx ? null : idx);
@@ -921,43 +910,7 @@ export default function Home() {
 
       {/* 11. Subscription Band & Multi-Zone Social Footer */}
       
-      {/* Subscription Strip (Styled with orange/terracotta gradient) */}
-      <section className="bg-gradient-to-r from-[#d25838] to-[#b83c21] py-16 text-white relative overflow-hidden">
-        <h2 className="sr-only">Wealth Security Briefings Newsletter</h2>
-        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-white text-lg font-bold uppercase tracking-wider">
-              Stay Informed on Wealth Security
-            </h3>
-            <p className="text-white/80 font-medium text-xs md:text-sm">
-              Periodic fiduciary briefings and regulatory underwriting reports.
-            </p>
-          </div>
-          
-          <form onSubmit={handleSignUp} className="flex gap-2 w-full md:w-auto max-w-sm">
-            <input 
-              type="email" 
-              required
-              placeholder="Enter corporate email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-grow px-4 py-3 bg-white text-xs text-slate-900 rounded-md placeholder-slate-400 focus:outline-none"
-            />
-            <button 
-              type="submit"
-              className="px-6 py-3 bg-[#111111] hover:bg-neutral-900 text-white font-bold uppercase tracking-wider text-xs rounded-md transition-all shadow"
-            >
-              SIGN UP
-            </button>
-          </form>
-        </div>
-        {signedUp && (
-          <div className="text-center text-xs text-white font-bold mt-4 animate-fade-in">
-            Registration confirmed. Executive briefings initiated.
-          </div>
-        )}
-      </section>
+
 
       {/* Nash Ecosystem Operations Section */}
       <section className="bg-slate-50 py-24 px-8 border-t border-slate-100">

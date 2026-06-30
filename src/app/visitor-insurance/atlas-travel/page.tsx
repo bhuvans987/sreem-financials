@@ -24,18 +24,7 @@ export default function AtlasTravelPage() {
     setMenuTimeoutId(id);
   };
 
-  // Newsletter state
-  const [email, setEmail] = useState("");
-  const [signedUp, setSignedUp] = useState(false);
 
-  const handleSignUp = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSignedUp(true);
-      setEmail("");
-      setTimeout(() => setSignedUp(false), 4000);
-    }
-  };
 
   const navItems: Record<
     string,
@@ -311,42 +300,7 @@ export default function AtlasTravelPage() {
         </div>
       </main>
 
-      {/* Subscription Band */}
-      <section className="bg-gradient-to-r from-[#d25838] to-[#b83c21] py-16 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-white text-lg font-bold uppercase tracking-wider">
-              Stay Informed on Wealth Security
-            </h3>
-            <p className="text-white/80 font-medium text-xs md:text-sm">
-              Periodic fiduciary briefings and regulatory underwriting reports.
-            </p>
-          </div>
-          
-          <form onSubmit={handleSignUp} className="flex gap-2 w-full md:w-auto max-w-sm">
-            <input 
-              type="email" 
-              required
-              placeholder="Enter corporate email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-grow px-4 py-3 bg-white text-xs text-slate-900 rounded-md placeholder-slate-400 focus:outline-none"
-            />
-            <button 
-              type="submit"
-              className="px-6 py-3 bg-[#111111] hover:bg-neutral-900 text-white font-bold uppercase tracking-wider text-xs rounded-md transition-all shadow"
-            >
-              SIGN UP
-            </button>
-          </form>
-        </div>
-        {signedUp && (
-          <div className="text-center text-xs text-white font-bold mt-4 animate-fade-in">
-            Registration confirmed. Executive briefings initiated.
-          </div>
-        )}
-      </section>
+
 
       {/* Social Band */}
       <section className="bg-[#1c1c1c] py-6 border-b border-neutral-800">
