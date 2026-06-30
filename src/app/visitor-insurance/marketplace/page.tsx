@@ -108,8 +108,8 @@ export default function MarketplacePage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-slate-400 font-semibold">Call Us: (210) 123-451</p>
-              <p className="text-xs text-slate-800 font-bold">(Sat - Thursday)</p>
+              <p className="text-xs text-slate-400 font-semibold">Call Us: +1 (510) 285-7322</p>
+              <p className="text-xs text-slate-800 font-bold">Mon - Sat</p>
             </div>
           </div>
 
@@ -121,8 +121,8 @@ export default function MarketplacePage() {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-slate-400 font-semibold">380 St Kilda Road,</p>
-              <p className="text-xs text-slate-800 font-bold">Melbourne, Australia</p>
+              <p className="text-xs text-slate-400 font-semibold">Houston,</p>
+              <p className="text-xs text-slate-800 font-bold">Texas</p>
             </div>
           </div>
         </div>
