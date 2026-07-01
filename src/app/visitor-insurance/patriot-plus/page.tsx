@@ -141,10 +141,7 @@ export default function PatriotPlusPage() {
               ))}
             </nav>
 
-            {/* CTA & Mobile Burger */}
-            <button className="hidden sm:inline-flex items-center gap-2 px-8 h-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#d25838] to-[#b83c21] hover:from-[#b83c21] hover:to-[#a03118] transition-all">
-              Private Consultation <span className="text-sm">➔</span>
-            </button>
+            {/* Mobile Burger */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-4 text-slate-600 hover:text-slate-900"
