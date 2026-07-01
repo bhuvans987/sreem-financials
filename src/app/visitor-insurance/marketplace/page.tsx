@@ -62,131 +62,92 @@ export default function MarketplacePage() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-[#c94b2b] selection:text-white">
       
-      {/* 1. Top Black Utility Bar */}
-      <div className="w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-center border-b border-white/5 z-50 relative gap-2">
-        <div>
-          Welcome to <span className="text-[#c94b2b]">Sreem Financials and Insurance Services</span>
-        </div>
-      </div>
-      
-      {/* 2. Middle Main Logo/Contact Header */}
-      <div className="w-full bg-white py-5 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-100">
-        <div className="flex items-center flex-shrink-0 gap-2">
-          <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[#d25838] to-[#b83c21] rounded-lg shadow-md transform rotate-3">
-            <span className="text-white font-black text-xl tracking-tighter">S</span>
-          </div>
-          <div>
-            <a href="/" className="text-2xl font-black tracking-wider text-slate-900 uppercase block">
-              SREEM FINANCIALS & <span className="text-[#c94b2b]">INSURANCE SERVICES</span>
-            </a>
-            <p className="text-[9px] tracking-widest text-slate-400 font-bold uppercase -mt-1">INSURANCE SOLUTIONS</p>
-          </div>
-        </div>
+      <header className="w-full h-20 bg-white/90 backdrop-blur-md border-b border-neutral-100 fixed top-0 left-0 z-50 px-4 sm:px-6">
+        <div className="w-full h-full flex items-center justify-between px-6 sm:px-12">
+          <Link href="/" className="flex items-center gap-x-3 outline-none group flex-shrink-0">
+            <img src="/images/sreemlogo (1).png" className="h-[72px] sm:h-[84px] w-auto object-contain block translate-y-[3px]" alt="Sreem Logo" />
+            <div className="hidden sm:flex items-center whitespace-nowrap gap-x-2">
+              <span className="text-neutral-950 font-black text-xl sm:text-2xl tracking-tight uppercase">SREEM</span>
+              <span className="text-neutral-500 font-bold text-xs sm:text-sm tracking-tight">Financials & Insurance Services</span>
+            </div>
+          </Link>
 
-        <div className="hidden md:flex items-center gap-8">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#c94b2b]/10 flex items-center justify-center text-[#c94b2b]">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-xs text-slate-400 font-semibold">Call Us: +1 (510) 285-7322</p>
-              <p className="text-xs text-slate-800 font-bold">Mon - Sat</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#c94b2b]/10 flex items-center justify-center text-[#c94b2b]">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-xs text-slate-400 font-semibold">Houston,</p>
-              <p className="text-xs text-slate-800 font-bold">Texas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 3. Navigation Bar */}
-      <header className="sticky top-0 z-50 bg-[#1c1c1c] shadow-lg transition-all duration-300">
-        <div className="max-w-none mx-auto h-16 flex items-center justify-between relative w-full pl-6 md:pl-12">
-          
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-6 h-full">
-            {Object.entries(navItems).map(([key, section]) => (
-              <div 
-                key={key} 
-                className="relative h-full flex items-center"
-                onMouseEnter={() => handleMouseEnter(key)}
-                onMouseLeave={handleMouseLeave}
-              >
-                {key === "visitor" ? (
-                  <div className="flex items-center h-full text-xs font-bold uppercase tracking-wider text-white">
-                    <Link 
-                      href="/visitor-insurance"
-                      className="hover:underline hover:text-[#c94b2b] transition-all cursor-pointer relative h-full flex items-center py-5 gap-1"
+          {/* Primary Group 2 (Right Aligned) */}
+          <div className="flex items-center gap-x-8 lg:gap-x-12 h-full">
+            {/* Navigation Links inside centered container */}
+            <nav className="hidden lg:flex items-center gap-2 xl:gap-6 h-full">
+              {Object.entries(navItems).map(([key, section]) => (
+                <div 
+                  key={key} 
+                  className="relative h-full flex items-center"
+                  onMouseEnter={() => handleMouseEnter(key)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {key === "visitor" ? (
+                    <div className="flex items-center h-full text-xs font-bold uppercase tracking-wider text-slate-800">
+                      <Link 
+                        href="/visitor-insurance"
+                        className="hover:underline hover:text-[#c94b2b] transition-all cursor-pointer relative h-full flex items-center py-5 gap-1 text-slate-800"
+                      >
+                        {section.title} ➔
+                      </Link>
+                    </div>
+                  ) : (
+                    <a
+                      href={section.items[0].link}
+                      className={`flex items-center gap-1.5 px-3 py-5 text-xs font-bold uppercase tracking-wider transition-all h-full border-b-2 ${
+                        activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-slate-800 hover:text-[#c94b2b]"
+                      }`}
                     >
-                      {section.title} ➔
-                    </Link>
-                  </div>
-                ) : (
-                  <a
-                    href={section.items[0].link}
-                    className={`flex items-center gap-1.5 px-3 py-5 text-xs font-bold uppercase tracking-wider transition-all h-full border-b-2 ${
-                      activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-white hover:text-[#c94b2b]"
-                    }`}
-                  >
-                    {section.title}
-                    <svg className={`w-3 h-3 transition-transform duration-200 ${activeMenu === key ? "rotate-180 text-[#c94b2b]" : "text-slate-400"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </a>
-                )}
+                      {section.title}
+                      <svg className={`w-3 h-3 transition-transform duration-200 ${activeMenu === key ? "rotate-180 text-[#c94b2b]" : "text-slate-400"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </a>
+                  )}
 
-                {activeMenu === key && (
-                  <div className="absolute left-0 top-[calc(100%)] pt-0 z-50">
-                    <div className={`rounded-b-md bg-[#1c1c1c] border-t-2 border-[#c94b2b] border-x border-b border-neutral-800 shadow-2xl p-6 animate-fade-in ${
-                      section.wide ? "w-[540px]" : "w-80"
-                    }`}>
-                      {key === "visitor" && (
-                        <Link 
-                          href="/visitor-insurance"
-                          className="bg-white/5 text-slate-300 hover:text-white font-bold text-[10px] tracking-wider uppercase p-3 mb-4 rounded-lg block border border-white/10 hover:border-[#c94b2b]/50 hover:bg-[#c94b2b]/5 transition-all text-center"
-                        >
-                          📊 Looking to compare all options? View Full Hub ➔
-                        </Link>
-                      )}
-                      <div className="uppercase tracking-widest text-xs font-bold text-[#c94b2b] mb-4 pb-2 border-b border-neutral-800">
-                        {section.title} Solutions
-                      </div>
-                      <div className={section.wide ? "grid grid-cols-2 gap-x-6 gap-y-3" : "flex flex-col gap-3.5"}>
-                        {section.items.map((item) => (
-                          <a 
-                            key={item.name} 
-                            href={item.link} 
-                            className="text-xs font-bold text-slate-200 hover:text-[#c94b2b] hover:translate-x-1 transition-all py-1"
+                  {/* Dropdown Box */}
+                  {activeMenu === key && (
+                    <div className="absolute left-0 top-[calc(100%)] pt-0 z-50">
+                      <div className={`rounded-b-md bg-[#1c1c1c] border-t-2 border-[#c94b2b] border-x border-b border-neutral-800 shadow-2xl p-6 animate-fade-in ${
+                        section.wide ? "w-[540px]" : "w-80"
+                      }`}>
+                        {key === "visitor" && (
+                          <Link 
+                            href="/visitor-insurance"
+                            className="bg-white/5 text-slate-300 hover:text-white font-bold text-[10px] tracking-wider uppercase p-3 mb-4 rounded-lg block border border-white/10 hover:border-[#c94b2b]/50 hover:bg-[#c94b2b]/5 transition-all text-center"
                           >
-                            {item.name}
-                          </a>
-                        ))}
+                            📊 Looking to compare all options? View Full Hub ➔
+                          </Link>
+                        )}
+                        <div className="uppercase tracking-widest text-xs font-bold text-[#c94b2b] mb-4 pb-2 border-b border-neutral-800">
+                          {section.title} Solutions
+                        </div>
+                        <div className={section.wide ? "grid grid-cols-2 gap-x-6 gap-y-3" : "flex flex-col gap-3.5"}>
+                          {section.items.map((item) => (
+                            <a 
+                              key={item.name} 
+                              href={item.link} 
+                              className="text-xs font-bold text-slate-200 hover:text-[#c94b2b] hover:translate-x-1 transition-all py-1"
+                            >
+                              {item.name}
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+                  )}
+                </div>
+              ))}
+            </nav>
 
-          <div className="flex items-center gap-0 h-full">
+            {/* CTA & Mobile Burger */}
             <button className="hidden sm:inline-flex items-center gap-2 px-8 h-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#d25838] to-[#b83c21] hover:from-[#b83c21] hover:to-[#a03118] transition-all">
               Private Consultation <span className="text-sm">➔</span>
             </button>
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-4 text-slate-300 hover:text-white"
+              className="lg:hidden p-4 text-slate-600 hover:text-slate-900"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileMenuOpen ? (
@@ -200,6 +161,7 @@ export default function MarketplacePage() {
 
         </div>
 
+        {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-neutral-800 bg-[#1c1c1c] px-6 py-6 space-y-6 max-h-[85vh] overflow-y-auto z-50 relative">
             {Object.entries(navItems).map(([key, section]) => (
@@ -221,7 +183,7 @@ export default function MarketplacePage() {
       </header>
 
       {/* Main Content Container (Pristine White Background, Sreem Accents) */}
-      <main className="flex-grow bg-white py-12 md:py-20 px-6 md:px-12 flex flex-col justify-center">
+      <main className="flex-grow bg-white pt-32 pb-12 md:pb-20 px-6 md:px-12 flex flex-col justify-center">
         <div className="max-w-4xl mx-auto w-full space-y-12">
           
           {/* Header Breadcrumb Row */}

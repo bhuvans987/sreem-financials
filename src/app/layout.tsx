@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     description: 'Institutional-grade asset safeguarding and international coverage frameworks.',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/images/sreemlogo (1).png',
+    shortcut: '/images/sreemlogo (1).png',
+    apple: '/images/sreemlogo (1).png',
   },
 };
 

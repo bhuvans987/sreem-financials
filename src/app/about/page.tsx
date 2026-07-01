@@ -60,60 +60,19 @@ export default function AboutNashPage() {
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans antialiased selection:bg-neutral-950 selection:text-white pt-32 pb-24 flex flex-col justify-between">
       
-      {/* 1. Top Black Utility Bar (Matches global style) */}
-      <div className="fixed top-0 left-0 right-0 z-50 w-full bg-[#111111] text-slate-300 text-xs font-semibold py-3 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-center border-b border-white/5 gap-2">
-        <div>
-          Welcome to <span className="text-[#c94b2b]">Sreem Financials and Insurance Services</span>
-        </div>
-      </div>
-
-      {/* Header Container that stays fixed below Top Utility Bar */}
-      <div className="fixed top-[41px] sm:top-[38px] left-0 right-0 z-40 bg-white">
-        {/* 2. Middle Main Logo/Contact Header */}
-        <div className="w-full py-4 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-100">
-          <div className="flex items-center flex-shrink-0 gap-2">
-            <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[#d25838] to-[#b83c21] rounded-lg shadow-md transform rotate-3">
-              <span className="text-white font-black text-xl tracking-tighter">S</span>
+      <header className="w-full h-20 bg-white/90 backdrop-blur-md border-b border-neutral-100 fixed top-0 left-0 z-50 px-4 sm:px-6">
+        <div className="w-full h-full flex items-center justify-between px-6 sm:px-12">
+          <Link href="/" className="flex items-center gap-x-3 outline-none group flex-shrink-0">
+            <img src="/images/sreemlogo (1).png" className="h-[72px] sm:h-[84px] w-auto object-contain block translate-y-[3px]" alt="Sreem Logo" />
+            <div className="hidden sm:flex items-center whitespace-nowrap gap-x-2">
+              <span className="text-neutral-950 font-black text-xl sm:text-2xl tracking-tight uppercase">SREEM</span>
+              <span className="text-neutral-500 font-bold text-xs sm:text-sm tracking-tight">Financials & Insurance Services</span>
             </div>
-            <div>
-              <Link href="/" className="text-2xl font-black tracking-wider text-slate-900 uppercase block">
-                SREEM FINANCIALS & <span className="text-[#c94b2b]">INSURANCE SERVICES</span>
-              </Link>
-              <p className="text-[9px] tracking-widest text-slate-400 font-bold uppercase -mt-1">INSURANCE SOLUTIONS</p>
-            </div>
-          </div>
+          </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#c94b2b]/10 flex items-center justify-center text-[#c94b2b]">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs text-slate-400 font-semibold">Call Us: +1 (510) 285-7322</p>
-                <p className="text-xs text-slate-800 font-bold">Mon - Sat</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#c94b2b]/10 flex items-center justify-center text-[#c94b2b]">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs text-slate-400 font-semibold">Houston,</p>
-                <p className="text-xs text-slate-800 font-bold">Texas</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 3. Navigation Bar */}
-        <div className="bg-[#1c1c1c] shadow-lg">
-          <div className="max-w-none mx-auto h-16 flex items-center justify-between relative w-full pl-6 md:pl-12">
+          {/* Primary Group 2 (Right Aligned) */}
+          <div className="flex items-center gap-x-8 lg:gap-x-12 h-full">
+            {/* Navigation Links inside centered container */}
             <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-2 xl:gap-6 h-full">
               {Object.entries(navItems).map(([key, section]) => (
                 <div 
@@ -123,11 +82,11 @@ export default function AboutNashPage() {
                   onMouseLeave={handleMouseLeave}
                 >
                   {key === "visitor" ? (
-                    <div className="flex items-center h-full text-xs font-bold uppercase tracking-wider text-white">
+                    <div className="flex items-center h-full text-xs font-bold uppercase tracking-wider text-slate-800">
                       <Link 
                         href="/visitor-insurance"
                         className={`flex items-center gap-1.5 px-3 py-5 text-xs font-bold uppercase tracking-wider transition-all h-full border-b-2 hover:no-underline ${
-                          activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-white hover:text-[#c94b2b]"
+                          activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-slate-800 hover:text-[#c94b2b]"
                         }`}
                       >
                         {section.title}
@@ -140,7 +99,7 @@ export default function AboutNashPage() {
                     <button 
                       onClick={() => setActiveMenu(activeMenu === key ? null : key)}
                       className={`flex items-center gap-1.5 px-3 py-5 text-xs font-bold uppercase tracking-wider transition-all h-full border-b-2 ${
-                        activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-white hover:text-[#c94b2b]"
+                        activeMenu === key ? "border-[#c94b2b] text-[#c94b2b]" : "border-transparent text-slate-800 hover:text-[#c94b2b]"
                       }`}
                     >
                       {section.title}
@@ -152,8 +111,8 @@ export default function AboutNashPage() {
 
                   {/* Dropdown Box */}
                   {activeMenu === key && (
-                    <div className="absolute left-0 top-full pt-0 z-50">
-                      <div className={`rounded-b-md bg-[#1c1c1c] border-t-2 border-[#c94b2b] border-x border-b border-neutral-800 shadow-2xl p-6 ${
+                    <div className="absolute left-0 top-[calc(100%)] pt-0 z-50">
+                      <div className={`rounded-b-md bg-[#1c1c1c] border-t-2 border-[#c94b2b] border-x border-b border-neutral-800 shadow-2xl p-6 animate-fade-in ${
                         section.wide ? "w-[540px]" : "w-80"
                       }`}>
                         {key === "visitor" && (
@@ -183,70 +142,48 @@ export default function AboutNashPage() {
                   )}
                 </div>
               ))}
-              
-              <Link 
-                href="/about"
-                className="px-3 py-5 text-xs font-bold uppercase tracking-wider text-[#c94b2b] border-b-2 border-[#c94b2b] h-full flex items-center"
-              >
-                About Nash
-              </Link>
             </nav>
 
             {/* CTA & Mobile Burger */}
-            <div className="flex items-center gap-0 h-full">
-              <button className="hidden sm:inline-flex items-center gap-2 px-8 h-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#d25838] to-[#b83c21] hover:from-[#b83c21] hover:to-[#a03118] transition-all">
-                Private Consultation <span className="text-sm">➔</span>
-              </button>
-              <button 
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-4 text-slate-300 hover:text-white"
-                aria-label="Toggle mobile menu"
-                aria-expanded={mobileMenuOpen}
-              >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {mobileMenuOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
-            </div>
+            <button className="hidden sm:inline-flex items-center gap-2 px-8 h-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#d25838] to-[#b83c21] hover:from-[#b83c21] hover:to-[#a03118] transition-all">
+              Private Consultation <span className="text-sm">➔</span>
+            </button>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-4 text-slate-600 hover:text-slate-900"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
 
-          {/* Mobile Navigation Drawer */}
-          {mobileMenuOpen && (
-            <nav aria-label="Mobile Navigation" className="lg:hidden border-t border-neutral-800 bg-[#1c1c1c] px-6 py-6 space-y-6 max-h-[85vh] overflow-y-auto z-50 relative">
-              {Object.entries(navItems).map(([key, section]) => (
-                <div key={key} className="space-y-3">
-                  <div className="text-xs font-extrabold text-[#c94b2b] uppercase tracking-widest border-b border-neutral-800 pb-1">
-                    {section.title}
-                  </div>
-                  <div className="pl-2 flex flex-col gap-2.5">
-                    {section.items.map((item) => (
-                      <a 
-                        key={item.name} 
-                        href={item.link} 
-                        className="text-xs font-bold text-slate-300 hover:text-[#c94b2b] transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              <div className="pt-2 border-t border-neutral-800">
-                <Link 
-                  href="/about" 
-                  className="text-xs font-extrabold text-[#c94b2b] uppercase tracking-widest block"
-                >
-                  About Nash
-                </Link>
-              </div>
-            </nav>
-          )}
         </div>
-      </div>
+
+        {/* Mobile Navigation Drawer */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-neutral-800 bg-[#1c1c1c] px-6 py-6 space-y-6 max-h-[85vh] overflow-y-auto z-50 relative">
+            {Object.entries(navItems).map(([key, section]) => (
+              <div key={key} className="space-y-3">
+                <div className="uppercase tracking-widest text-xs font-bold text-[#c94b2b] border-b border-neutral-800 pb-1">
+                  {section.title}
+                </div>
+                <div className="flex flex-col gap-3 pl-2">
+                  {section.items.map((item) => (
+                    <a key={item.name} href={item.link} className="text-xs font-medium text-slate-300 hover:text-[#c94b2b]">
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </header>
 
       {/* 2. Main content section */}
       <main className="mt-32 max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start w-full">
